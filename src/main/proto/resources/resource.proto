@@ -1,0 +1,128 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "co.archifact.core";
+//option java_outer_classname = "HelloWorldProto";
+
+package archifact;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+// Request and Response messages for DeployResources
+message DeployResourcesRequest {
+  int64 project_id = 1;
+  repeated Resource resources = 2;
+}
+
+message DeployResourcesResponse {
+  int64 deployment_id = 1;
+  DeploymentStatus status = 2;
+  repeated ResourceStatusDetails resources = 3;
+}
+
+// Structure to convey the status of individual resources in a deployment
+message ResourceStatusDetails {
+  int64 resource_id = 1;
+  ResourceStatus status = 2;
+}
+
+// Request and Response messages for UpdateResource
+message UpdateResourceRequest {
+  int64 resource_id = 1;
+  Resource resource = 2; // Updated resource definition
+}
+
+message UpdateResourceResponse {
+  bool success = 1;
+  ResourceStatus status = 2;
+}
+
+// Request and Response messages for DeleteResource
+message DeleteResourceRequest {
+  int64 resource_id = 1;
+}
+
+message DeleteResourceResponse {
+  bool success = 1;
+}
+
+// Request and Response messages for ListResources
+message ListResourcesRequest {
+  int64 project_id = 1;
+  ResourceType type = 2; // Optional filter by resource type
+  string name = 3; // Optional filter by resource name
+}
+
+message ListResourcesResponse {
+  repeated Resource resources = 1;
+}
+
+// Enum to represent the cloud providers supported by Archifact
+enum CloudProvider {
+  AWS = 0;
+  GCP = 1;
+  AZURE = 2;
+  // Add more as needed
+}
+
+// Enum for generic resource types, to be interpreted based on the cloud provider
+enum ResourceType {
+  STORAGE = 0;
+  COMPUTE = 1;
+  FUNCTION = 2;
+  QUEUE = 3;
+  TOPIC = 4;
+  // Extend with more generic types as needed
+}
+
+// Enum for the status of a deployment
+enum DeploymentStatus {
+  PENDING = 0;
+  IN_PROGRESS = 1;
+  COMPLETED = 2;
+  FAILED = 3;
+}
+
+// Enum for the status of an individual resource
+enum ResourceStatus {
+  ACTIVE = 0;
+  DELETING = 1;
+  DELETED = 2;
+}
+
+// Message to define a cloud resource
+message Resource {
+  int64 id = 1;
+  string name = 2;
+  ResourceType type = 3;
+  CloudProvider cloudProvider = 4;
+  map<string, string> properties = 5;
+  repeated int64 dependencies = 6; // List of IDs of dependent resources
+  ResourceStatus status = 7;
+  map<string, string> metadata = 8; // Additional metadata
+}
+
+// Message for a deployment, which includes multiple resources
+message Deployment {
+  int64 id = 1;
+  repeated Resource resources = 2;
+  CloudProvider cloudProvider = 3;
+  DeploymentStatus status = 4;
+  google.protobuf.Timestamp createdAt = 5;
+  google.protobuf.Timestamp updatedAt = 6;
+}
+
+service ResourceManagementService {
+  // Deploys resources based on the given architecture definition
+  rpc DeployResources(DeployResourcesRequest) returns (DeployResourcesResponse) {};
+
+  // Updates a specific resource with new definitions or properties
+  rpc UpdateResource(UpdateResourceRequest) returns (UpdateResourceResponse) {};
+
+  // Deletes a specified resource by ID
+  rpc DeleteResource(DeleteResourceRequest) returns (DeleteResourceResponse) {};
+
+  // Lists resources within a project, with optional filtering
+  rpc ListResources(ListResourcesRequest) returns (ListResourcesResponse) {};
+}
