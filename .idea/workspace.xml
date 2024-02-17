@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82960121-b3eb-4e07-af96-20e89b6f1dd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/controller/ResourceManagementServiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/ResourceManagementService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/deployment/DeploymentManagementService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/deployment/PrepareDeploymentRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/deployment/PrepareDeploymentResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/proto/resources/resource.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/proto/resources/workspace.proto" afterDir="false" />
+    <list default="true" id="82960121-b3eb-4e07-af96-20e89b6f1dd7" name="Changes" comment="feat: add resource management service">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/archifact/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/archifact/core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/archifact/core/controller/ResourceManagementServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/controller/ResourceManagementServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/ResourceManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/ResourceManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/resources/resource.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/resources/resource.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/resources/workspace.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/resources/workspace.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +94,19 @@
       <option name="presentableId" value="Default" />
       <updated>1708177362826</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: add resource management service">
+      <created>1708195062531</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708195062531</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: add resource management service" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add resource management service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

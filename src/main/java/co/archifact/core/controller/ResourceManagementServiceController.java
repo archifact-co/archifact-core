@@ -6,9 +6,13 @@ import co.archifact.core.DeploymentStatus;
 import co.archifact.core.ResourceManagementServiceGrpc;
 import co.archifact.core.service.ResourceManagementService;
 import io.grpc.stub.StreamObserver;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ResourceManagementServiceController
         extends ResourceManagementServiceGrpc.ResourceManagementServiceImplBase {
+
+    private static Logger logger = LogManager.getLogger(ResourceManagementServiceController.class.getName());
 
     private final ResourceManagementService resourceManagementService;
 
@@ -23,7 +27,7 @@ public class ResourceManagementServiceController
             final DeployResourcesRequest request,
             final StreamObserver<DeployResourcesResponse> responseObserver
     ) {
-        System.out.println("Preparing resource deployment resources");
+        logger.info("Preparing resources deployment");
 
         resourceManagementService.prepareDeployment(request);
 
