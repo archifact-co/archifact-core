@@ -1,7 +1,9 @@
 package co.archifact.core;
 
 import co.archifact.core.controller.ResourceManagementServiceController;
+import co.archifact.core.controller.WorkspaceManagementController;
 import co.archifact.core.service.ResourceManagementService;
+import co.archifact.core.service.workspace.WorkspaceService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import org.apache.logging.log4j.LogManager;
@@ -21,7 +23,12 @@ public class Main {
                 .addService(new ResourceManagementServiceController(
                                 new ResourceManagementService()
                         )
-                ).build();
+                )
+                .addService(new WorkspaceManagementController(
+                                new WorkspaceService()
+                        )
+                )
+                .build();
 
         server.start();
         server.awaitTermination();

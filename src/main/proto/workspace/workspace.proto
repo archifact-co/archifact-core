@@ -1,0 +1,26 @@
+syntax = "proto3";
+package archifact;
+
+import "resources/resource.proto";
+
+option java_multiple_files = true;
+option java_package = "co.archifact.core";
+
+// Request message for initializing a new workspace
+message InitializeWorkspaceRequest {
+  string workspace_name = 1; // The name of the project
+  CloudProvider cloud_provider = 3; // Target cloud provider for the project
+  string workspace_path = 4; // Optional: Path where the project should be initialized
+}
+
+// Response message for InitializeWorkspace RPC call
+message InitializeWorkspaceResponse {
+  bool success = 1; // Indicates if the workspace was successfully initialized
+  string message = 2; // Provides additional information or error messages
+}
+
+service WorkspaceService {
+
+  rpc InitializeWorkspace(InitializeWorkspaceRequest) returns (InitializeWorkspaceResponse) {};
+
+}

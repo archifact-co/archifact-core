@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82960121-b3eb-4e07-af96-20e89b6f1dd7" name="Changes" comment="feat: add resource management service">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+    <list default="true" id="82960121-b3eb-4e07-af96-20e89b6f1dd7" name="Changes" comment="feat: added log42 config">
+      <change afterPath="$PROJECT_DIR$/.idea/protoeditor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/controller/WorkspaceManagementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/CreateWorkspaceRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/CreateWorkspaceResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/WorkspaceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/proto/workspace/workspace.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/archifact/core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/archifact/core/controller/ResourceManagementServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/controller/ResourceManagementServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/ResourceManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/ResourceManagementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/proto/resources/resource.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/resources/resource.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/resources/workspace.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/resources/workspace.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/resources/workspace.proto" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +52,12 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="co.archifact.core.service.workspace" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/proto/workspace" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="co.archifact.core" />
     </key>
@@ -101,12 +109,20 @@
       <option name="project" value="LOCAL" />
       <updated>1708195062531</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: added log42 config">
+      <created>1708205921237</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708205921237</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: add resource management service" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add resource management service" />
+    <MESSAGE value="feat: added log42 config" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added log42 config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
