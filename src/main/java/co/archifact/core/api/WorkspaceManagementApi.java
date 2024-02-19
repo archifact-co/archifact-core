@@ -1,4 +1,4 @@
-package co.archifact.core.controller;
+package co.archifact.core.api;
 
 import co.archifact.core.InitializeWorkspaceRequest;
 import co.archifact.core.InitializeWorkspaceResponse;
@@ -10,13 +10,13 @@ import io.grpc.stub.StreamObserver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class WorkspaceManagementController extends WorkspaceServiceGrpc.WorkspaceServiceImplBase {
+public class WorkspaceManagementApi extends WorkspaceServiceGrpc.WorkspaceServiceImplBase {
 
-    private static final Logger logger = LogManager.getLogger(WorkspaceManagementController.class);
+    private static final Logger logger = LogManager.getLogger(WorkspaceManagementApi.class);
 
     private final WorkspaceService workspaceService;
 
-    public WorkspaceManagementController(final WorkspaceService workspaceService) {
+    public WorkspaceManagementApi(final WorkspaceService workspaceService) {
         this.workspaceService = workspaceService;
     }
 

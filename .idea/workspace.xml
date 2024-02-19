@@ -70,7 +70,7 @@
       <recent name="co.archifact.core.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WorkspaceManagementControllerTest.shouldInitializeWorkspace">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="co.archifact.core.Main" />
       <module name="archifact-core" />
@@ -84,16 +84,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkspaceManagementControllerTest.shouldInitializeWorkspace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WorkspaceManagementApiTest.shouldInitializeWorkspace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="archifact-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="co.archifact.core.controller.*" />
+          <option name="PATTERN" value="co.archifact.core.api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="co.archifact.core.controller" />
-      <option name="MAIN_CLASS_NAME" value="co.archifact.core.controller.WorkspaceManagementControllerTest" />
+      <option name="PACKAGE_NAME" value="co.archifact.core.api" />
+      <option name="MAIN_CLASS_NAME" value="co.archifact.core.api.WorkspaceManagementApiTest" />
       <option name="METHOD_NAME" value="shouldInitializeWorkspace" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -113,7 +113,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WorkspaceManagementControllerTest.shouldInitializeWorkspace" />
+        <item itemvalue="JUnit.WorkspaceManagementApiTest.shouldInitializeWorkspace" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

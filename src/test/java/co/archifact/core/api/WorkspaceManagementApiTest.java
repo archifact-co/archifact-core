@@ -1,4 +1,4 @@
-package co.archifact.core.controller;
+package co.archifact.core.api;
 
 import co.archifact.core.CloudProvider;
 import co.archifact.core.InitializeWorkspaceRequest;
@@ -20,7 +20,7 @@ import java.nio.file.Path;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class WorkspaceManagementControllerTest {
+class WorkspaceManagementApiTest {
 
     public static final String WORKSPACE_NAME = "workspaceName";
 
@@ -35,12 +35,12 @@ class WorkspaceManagementControllerTest {
     private Path tempDirectory;
 
 
-    public WorkspaceManagementControllerTest() {
+    public WorkspaceManagementApiTest() {
         // Create an in-process server with a unique name
         String serverName = InProcessServerBuilder.generateName();
         server = InProcessServerBuilder.forName(serverName)
                 .directExecutor() // directExecutor is fine for unit tests
-                .addService(new WorkspaceManagementController(
+                .addService(new WorkspaceManagementApi(
                         new WorkspaceService()
                 )) // Your service implementation
                 .build();

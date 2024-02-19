@@ -21,7 +21,5 @@ message InitializeWorkspaceResponse {
 }
 
 service WorkspaceService {
-
-  rpc InitializeWorkspace(InitializeWorkspaceRequest) returns (InitializeWorkspaceResponse) {};
-
+  rpc InitializeWorkspace(InitializeWorkspaceRequest) returns (InitializeWorkspaceResponse) {}
 }

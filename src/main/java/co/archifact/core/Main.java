@@ -1,7 +1,7 @@
 package co.archifact.core;
 
-import co.archifact.core.controller.ResourceManagementServiceController;
-import co.archifact.core.controller.WorkspaceManagementController;
+import co.archifact.core.api.ResourceManagementServiceApi;
+import co.archifact.core.api.WorkspaceManagementApi;
 import co.archifact.core.service.ResourceManagementService;
 import co.archifact.core.service.workspace.WorkspaceService;
 import io.grpc.Server;
@@ -20,11 +20,11 @@ public class Main {
 
         Server server = ServerBuilder
                 .forPort(8080)
-                .addService(new ResourceManagementServiceController(
+                .addService(new ResourceManagementServiceApi(
                                 new ResourceManagementService()
                         )
                 )
-                .addService(new WorkspaceManagementController(
+                .addService(new WorkspaceManagementApi(
                                 new WorkspaceService()
                         )
                 )
