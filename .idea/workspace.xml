@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82960121-b3eb-4e07-af96-20e89b6f1dd7" name="Changes" comment="feat: added log42 config">
-      <change afterPath="$PROJECT_DIR$/.idea/protoeditor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/controller/WorkspaceManagementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/CreateWorkspaceRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/CreateWorkspaceResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/WorkspaceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/proto/workspace/workspace.proto" afterDir="false" />
+    <list default="true" id="82960121-b3eb-4e07-af96-20e89b6f1dd7" name="Changes" comment="feat: added workspace controller">
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/ArchifactConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/ProjectProgrammingLanguage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/archifact/core/controller/WorkspaceManagementControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/archifact/core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/resources/resource.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/resources/resource.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/resources/workspace.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/archifact/core/controller/WorkspaceManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/controller/WorkspaceManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/CreateWorkspaceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/CreateWorkspaceRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/WorkspaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/archifact/core/service/workspace/WorkspaceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/workspace/workspace.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/workspace/workspace.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -44,6 +44,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
@@ -58,11 +60,17 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/proto/workspace" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="co.archifact.core" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="co.archifact.core.controller" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.WorkspaceManagementControllerTest.shouldInitializeWorkspace">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="co.archifact.core.Main" />
       <module name="archifact-core" />
@@ -72,6 +80,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorkspaceManagementControllerTest.shouldInitializeWorkspace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="archifact-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.archifact.core.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="co.archifact.core.controller" />
+      <option name="MAIN_CLASS_NAME" value="co.archifact.core.controller.WorkspaceManagementControllerTest" />
+      <option name="METHOD_NAME" value="shouldInitializeWorkspace" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,6 +113,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WorkspaceManagementControllerTest.shouldInitializeWorkspace" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -116,13 +141,21 @@
       <option name="project" value="LOCAL" />
       <updated>1708205921237</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: added workspace controller">
+      <created>1708299696688</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708299696688</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: add resource management service" />
     <MESSAGE value="feat: added log42 config" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added log42 config" />
+    <MESSAGE value="feat: added workspace controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added workspace controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
